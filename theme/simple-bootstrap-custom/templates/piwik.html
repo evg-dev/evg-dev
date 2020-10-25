@@ -1,14 +1,10 @@
 {% if PIWIK_URL and PIWIK_SITE_ID %}
 <script type="text/javascript">
-    {%
-        if PIWIK_SSL_URL %}
+    {% if PIWIK_SSL_URL %}
     var pkBaseURL = (("https:" == document.location.protocol) ? "https://{{ PIWIK_SSL_URL }}/" : "http://{{ PIWIK_URL }}/");
-    {% else %
-    }
+    {% else %}
     var pkBaseURL = (("https:" == document.location.protocol) ? "https://{{ PIWIK_URL }}/" : "http://{{ PIWIK_URL }}/");
-    {%
-        endif %
-    }
+    {% endif %}
     document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
 </script>
 <script type="text/javascript">

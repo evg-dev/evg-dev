@@ -1,10 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>HandBook</title>
+    <title>Developer HandBook</title>
+    <meta charset="utf-8"/>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="./theme/static/css/style.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
-<body>
-    <h1 style="text-align: center">It's be my site soon</h1>
+
+<body id="index" class="archive">
+<div class="container">
+    <div class="header">
+        <ul class="nav nav-pills pull-right">
+            <li class="active"><a href=".">Home</a></li>
+            <!--                    <li><a href="./archives.html">Archives</a></li>-->
+            <!--                    <p>index.htmlcategory/linux.html</p>-->
+            <li ><a
+                    href="./category/linux">Linux</a></li>
+            <!--                    <p>index.htmlcategory/pelican.html</p>-->
+            <li ><a
+                    href="./category/pelican">Pelican</a></li>
+            <!--                    <p>index.htmlcategory/postgres.html</p>-->
+            <li ><a
+                    href="./category/postgres">Postgres</a></li>
+        </ul>
+        <h3 class="text-muted"><a href=".">Developer HandBook</a></h3>
+        <h2 class="text-muted"></h2>
+    </div>
+<section id="content" class="content">
+
+        <article class="hentry">
+                <header><h2 class="entry-title"><a href="./Synaptic.html" rel="bookmark"
+                                                   title="Permalink to Synaptic">Synaptic</a></h2></header>
+                <div class="entry-content"> <p>Install quick filter</p>
+<div class="highlight"><pre><span></span><code>sudo apt-get update
+sudo apt-get install apt-xapian-index
+</code></pre></div></div><!-- entry-content -->
+        </article>
+        <article class="hentry">
+                <header><h2 class="entry-title"><a href="./install-pelican.html" rel="bookmark"
+                                                   title="Permalink to Python Pelican Tutorial">Python Pelican Tutorial</a></h2></header>
+                <div class="entry-content"> <p>python3 install from pip3</p>
+<div class="highlight"><pre><span></span><code>pip3 install pelican markdown
+</code></pre></div>
+
+<p>Quick initial project</p>
+<div class="highlight"><pre><span></span><code>pelican-quickstart
+</code></pre></div>
+
+<p>Set on pelicanconf.py for local developing</p>
+<div class="highlight"><pre><span></span><code><span class="n">RELATIVE_URLS</span> <span class="o">=</span> <span class="kc">True</span>
+</code></pre></div>
+
+<p>Run develop server</p>
+<div class="highlight"><pre><span></span><code>pelican --list
+</code></pre></div>
+
+<p>Build with options</p>
+<div class="highlight"><pre><span></span><code>pelican -s pelicanconf.py -o output -D
+</code></pre></div>
+
+<p>Download templates</p>
+<div class="highlight"><pre><span></span><code>git clone --recursive https://github.com/getpelican/pelicanthemes.git
+</code></pre></div>
+
+<p>Select theme, copy …</p></div><!-- entry-content -->
+        </article>
+        <article class="hentry">
+                <header><h2 class="entry-title"><a href="./install-postgres.html" rel="bookmark"
+                                                   title="Permalink to Ubuntu/Debian install PostgresSQL">Ubuntu/Debian install PostgresSQL</a></h2></header>
+                <div class="entry-content"> <div class="highlight"><pre><span></span><code>sudo apt-get update
+sudo apt-get install postgresql postgresql-contrib
+</code></pre></div>
+
+<p>Check install</p>
+<div class="highlight"><pre><span></span><code>sudo -i -u postgres psql
+</code></pre></div>
+
+<p>Create user in linux</p>
+<div class="highlight"><pre><span></span><code>sudo adduser username
+</code></pre></div>
+
+<p>Add user in postgres </p>
+<div class="highlight"><pre><span></span><code>sudo -u postgres createuser --interactive
+</code></pre></div>
+
+<p>And see</p>
+<div class="highlight"><pre><span></span><code>Enter name of role to add: username
+Shall the new role be a superuser? <span class="o">(</span>y/n<span class="o">)</span> y …</code></pre></div></div><!-- entry-content -->
+        </article>
+<div class="pager">
+
+    <ul>
+        <!--                        <li class="previous disabled"><a>← Previous</a></li>-->
+        <!--                        <li class="next disabled"><a>Next →</a></li>-->
+    </ul>
+</div>
+</section><!-- content -->
+    <footer id="contentinfo" class="footer">
+        <!--                    <nav class="pull-right bottom-nav">-->
+        <!--                        <a href="/None">RSS</a>-->
+        <!--                    </nav>-->
+        <address id="about" class="vcard body">
+            <a href=".">evg-dev.github.io</a>
+        </address><!-- /#about -->
+    </footer><!-- /#contentinfo -->
+</div><!-- container -->
 </body>
 </html>
