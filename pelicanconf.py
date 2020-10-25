@@ -3,7 +3,7 @@
 
 AUTHOR = 'evg-dev'
 SITENAME = 'Developer HandBook'
-SITEURL = 'evg-dev.github.io'
+SITEURL = '/'
 
 PATH = 'content'
 THEME = 'theme/simple-bootstrap-custom'
