@@ -480,6 +480,11 @@ a:visited {
     color: #006919;
 }
 
+
+.highlight {
+    width: max-content;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     /* Remove the padding we set earlier */

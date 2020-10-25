@@ -132,7 +132,8 @@ body {
 
 /* code style */
 .highlight {
-    background-color: #ffffcc
+    background-color: #ffffcc;
+    width: max-content;
 }
 
 .c {
