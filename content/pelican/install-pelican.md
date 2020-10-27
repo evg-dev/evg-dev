@@ -24,8 +24,14 @@ RELATIVE_URLS = True
 Run develop server
 
 ```bash
+make devserver
+```
+
+```bash
 pelican --list
 ```
+
+
 
 Build with options
 

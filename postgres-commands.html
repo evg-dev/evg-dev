@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PostgresSQL Commands - Developer HandBook</title>
+    <meta charset="utf-8"/>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/theme/static/css/style.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+
+<body id="index" class="archive">
+<div class="container">
+    <div class="header">
+        <ul class="nav nav-pills pull-right">
+
+            <li class=""><a href="/">Home</a></li>
+            <!--                    <li><a href="/archives.html">Archives</a></li>-->
+            <!--                    <p>postgres-commands.htmlcategory/docker.html</p>-->
+            <li><a
+                    href="/category/docker">Docker</a></li>
+            <!--                    <p>postgres-commands.htmlcategory/linux.html</p>-->
+            <li><a
+                    href="/category/linux">Linux</a></li>
+            <!--                    <p>postgres-commands.htmlcategory/pelican.html</p>-->
+            <li><a
+                    href="/category/pelican">Pelican</a></li>
+            <!--                    <p>postgres-commands.htmlcategory/postgres.html</p>-->
+            <li><a
+                    href="/category/postgres">Postgres</a></li>
+        </ul>
+        <h3 class="text-muted"><a href="/">Developer HandBook</a></h3>
+        <h2 class="text-muted"></h2>
+    </div>
+    <section id="content" class="article content">
+        <header>
+            <h2 class="entry-title">
+                <a href="/postgres-commands.html" rel="bookmark"
+                   title="Permalink to PostgresSQL Commands">PostgresSQL Commands</a></h2>
+
+        </header>
+
+
+        <div class="entry-content">
+            <p>Save backup to dump.sql</p>
+            <div class="highlight"><pre><span></span><code>pg_dump --clean -U username database  &gt; dump.sql
+</code></pre>
+            </div>
+
+            <p>Restore from dump.sql</p>
+            <div class="highlight"><pre><span></span><code>sudo -i -u postgres psql -d database &lt; dump.sql
+</code></pre>
+            </div>
+
+            <div class="highlight"><pre><span></span><code>psql -U postgres -d database &lt; dump.sql
+</code></pre>
+            </div>
+
+            <div class="highlight"><pre><span></span><code>psql --username username --dbname database -f dump.sql
+</code></pre>
+            </div>
+        </div><!-- /.entry-content -->
+        <footer class="post-info text-muted">
+            Posted on <abbr class="published" title="2020-10-27T12:00:00+05:00">
+            Вт 27 октября 2020
+        </abbr>
+            <address class="vcard author">
+                by <a class="url fn" href="/author/evg-dev.html">evg-dev</a>
+            </address>
+            in <a href="/category/postgres">Postgres</a> Tagged
+        </footer><!-- /.post-info -->
+    </section>
+    <footer id="contentinfo" class="footer">
+        <!--                    <nav class="pull-right bottom-nav">-->
+        <!--                        <a href="/None">RSS</a>-->
+        <!--                    </nav>-->
+        <address id="about" class="vcard body">
+            <a href="/">evg-dev.github.io</a>
+        </address><!-- /#about -->
+    </footer><!-- /#contentinfo -->
+</div><!-- container -->
+</body>
+</html>

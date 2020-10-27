@@ -15,22 +15,48 @@
 
             <li class=""><a href="/">Home</a></li>
             <!--                    <li class="active"><a href="/archives.html">Archives</a></li>-->
+            <!--                    <p>category/postgres.htmlcategory/docker.html</p>-->
+            <li><a
+                    href="/category/docker">Docker</a></li>
             <!--                    <p>category/postgres.htmlcategory/linux.html</p>-->
-            <li ><a
+            <li><a
                     href="/category/linux">Linux</a></li>
             <!--                    <p>category/postgres.htmlcategory/pelican.html</p>-->
-            <li ><a
+            <li><a
                     href="/category/pelican">Pelican</a></li>
             <!--                    <p>category/postgres.htmlcategory/postgres.html</p>-->
-            <li  class="active" ><a
+            <li class="active"><a
                     href="/category/postgres">Postgres</a></li>
         </ul>
         <h3 class="text-muted"><a href="/">Developer HandBook</a></h3>
         <h2 class="text-muted"></h2>
     </div>
-<section id="content" class="content">
-<h2>Articles in the Postgres category</h2>
+    <section id="content" class="content">
+        <!--<h2 class="category_list_title">Category : Postgres</h2>-->
 
+        <article class="hentry">
+            <header><h2 class="entry-title"><a href="/postgres-commands.html" rel="bookmark"
+                                               title="Permalink to PostgresSQL Commands">PostgresSQL Commands</a></h2>
+            </header>
+            <div class="entry-content"><p>Save backup to dump.sql</p>
+                <div class="highlight"><pre><span></span><code>pg_dump --clean -U username database  &gt; dump.sql
+</code></pre>
+                </div>
+
+                <p>Restore from dump.sql</p>
+                <div class="highlight"><pre><span></span><code>sudo -i -u postgres psql -d database &lt; dump.sql
+</code></pre>
+                </div>
+
+                <div class="highlight"><pre><span></span><code>psql -U postgres -d database &lt; dump.sql
+</code></pre>
+                </div>
+
+                <div class="highlight"><pre><span></span><code>psql --username username --dbname database -f dump.sql
+</code></pre>
+                </div>
+            </div><!-- entry-content -->
+        </article>
         <article class="hentry">
                 <header><h2 class="entry-title"><a href="/install-postgres.html" rel="bookmark"
                                                    title="Permalink to Ubuntu/Debian install PostgresSQL">Ubuntu/Debian install PostgresSQL</a></h2></header>

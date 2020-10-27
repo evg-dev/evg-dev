@@ -15,14 +15,17 @@
 
             <li class=""><a href="/">Home</a></li>
             <!--                    <li><a href="/archives.html">Archives</a></li>-->
+            <!--                    <p>install-pelican.htmlcategory/docker.html</p>-->
+            <li><a
+                    href="/category/docker">Docker</a></li>
             <!--                    <p>install-pelican.htmlcategory/linux.html</p>-->
-            <li ><a
+            <li><a
                     href="/category/linux">Linux</a></li>
             <!--                    <p>install-pelican.htmlcategory/pelican.html</p>-->
-            <li ><a
+            <li><a
                     href="/category/pelican">Pelican</a></li>
             <!--                    <p>install-pelican.htmlcategory/postgres.html</p>-->
-            <li ><a
+            <li><a
                     href="/category/postgres">Postgres</a></li>
         </ul>
         <h3 class="text-muted"><a href="/">Developer HandBook</a></h3>
@@ -42,24 +45,33 @@
 <div class="highlight"><pre><span></span><code>pip3 install pelican markdown
 </code></pre></div>
 
-<p>Quick initial project</p>
-<div class="highlight"><pre><span></span><code>pelican-quickstart
-</code></pre></div>
+        <p>Quick initial project</p>
+        <div class="highlight"><pre><span></span><code>pelican-quickstart
+</code></pre>
+        </div>
 
-<p>Set on pelicanconf.py for local developing</p>
-<div class="highlight"><pre><span></span><code><span class="n">RELATIVE_URLS</span> <span class="o">=</span> <span class="kc">True</span>
-</code></pre></div>
+        <p>Set on pelicanconf.py for local developing</p>
+        <div class="highlight"><pre><span></span><code><span class="n">RELATIVE_URLS</span> <span
+                class="o">=</span> <span class="kc">True</span>
+</code></pre>
+        </div>
 
-<p>Run develop server</p>
-<div class="highlight"><pre><span></span><code>pelican --list
-</code></pre></div>
+        <p>Run develop server</p>
+        <div class="highlight"><pre><span></span><code>make devserver
+</code></pre>
+        </div>
 
-<p>Build with options</p>
-<div class="highlight"><pre><span></span><code>pelican -s pelicanconf.py -o output -D
-</code></pre></div>
+        <div class="highlight"><pre><span></span><code>pelican --list
+</code></pre>
+        </div>
 
-<p>Download templates</p>
-<div class="highlight"><pre><span></span><code>git clone --recursive https://github.com/getpelican/pelicanthemes.git
+        <p>Build with options</p>
+        <div class="highlight"><pre><span></span><code>pelican -s pelicanconf.py -o output -D
+</code></pre>
+        </div>
+
+        <p>Download templates</p>
+        <div class="highlight"><pre><span></span><code>git clone --recursive https://github.com/getpelican/pelicanthemes.git
 </code></pre></div>
 
 <p>Select theme, copy to <code>/theme/</code> on root project and set you THEME on pelicanconf.py for customisation  </p>

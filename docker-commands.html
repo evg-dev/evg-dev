@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Docker Commands - Developer HandBook</title>
+    <meta charset="utf-8"/>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/theme/static/css/style.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+
+<body id="index" class="archive">
+<div class="container">
+    <div class="header">
+        <ul class="nav nav-pills pull-right">
+
+            <li class=""><a href="/">Home</a></li>
+            <!--                    <li><a href="/archives.html">Archives</a></li>-->
+            <!--                    <p>docker-commands.htmlcategory/docker.html</p>-->
+            <li><a
+                    href="/category/docker">Docker</a></li>
+            <!--                    <p>docker-commands.htmlcategory/linux.html</p>-->
+            <li><a
+                    href="/category/linux">Linux</a></li>
+            <!--                    <p>docker-commands.htmlcategory/pelican.html</p>-->
+            <li><a
+                    href="/category/pelican">Pelican</a></li>
+            <!--                    <p>docker-commands.htmlcategory/postgres.html</p>-->
+            <li><a
+                    href="/category/postgres">Postgres</a></li>
+        </ul>
+        <h3 class="text-muted"><a href="/">Developer HandBook</a></h3>
+        <h2 class="text-muted"></h2>
+    </div>
+    <section id="content" class="article content">
+        <header>
+            <h2 class="entry-title">
+                <a href="/docker-commands.html" rel="bookmark"
+                   title="Permalink to Docker Commands">Docker Commands</a></h2>
+
+        </header>
+
+
+        <div class="entry-content">
+            <p>Build image</p>
+            <div class="highlight"><pre><span></span><code>docker build . -t tagname
+</code></pre>
+            </div>
+
+            <p>Shell inside container, etc...</p>
+            <div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -it image sh
+</code></pre>
+            </div>
+
+            <p>Grep logs</p>
+            <div class="highlight"><pre><span></span><code>docker logs image <span class="m">2</span>&gt;<span
+                    class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> grep <span class="s2">&quot;string&quot;</span>
+</code></pre>
+            </div>
+
+            <p>Get dump.sql from container</p>
+            <div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -it image pg_dump -U username database &gt; dump.sql
+</code></pre>
+            </div>
+
+            <p>Restore from dump.sql to container</p>
+            <div class="highlight"><pre><span></span><code>cat dump.sql <span class="p">|</span> docker <span
+                    class="nb">exec</span> -i image psql -U username -d database
+</code></pre>
+            </div>
+
+            <p>Clear old image</p>
+            <div class="highlight"><pre><span></span><code>docker system prune -a
+</code></pre>
+            </div>
+        </div><!-- /.entry-content -->
+        <footer class="post-info text-muted">
+            Posted on <abbr class="published" title="2020-10-27T12:00:00+05:00">
+            Вт 27 октября 2020
+        </abbr>
+            <address class="vcard author">
+                by <a class="url fn" href="/author/evg-dev.html">evg-dev</a>
+            </address>
+            in <a href="/category/docker">Docker</a> Tagged
+        </footer><!-- /.post-info -->
+    </section>
+    <footer id="contentinfo" class="footer">
+        <!--                    <nav class="pull-right bottom-nav">-->
+        <!--                        <a href="/None">RSS</a>-->
+        <!--                    </nav>-->
+        <address id="about" class="vcard body">
+            <a href="/">evg-dev.github.io</a>
+        </address><!-- /#about -->
+    </footer><!-- /#contentinfo -->
+</div><!-- container -->
+</body>
+</html>

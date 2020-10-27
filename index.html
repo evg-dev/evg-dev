@@ -15,57 +15,137 @@
 
             <li class="active"><a href="/">Home</a></li>
             <!--                    <li><a href="/archives.html">Archives</a></li>-->
+            <!--                    <p>index.htmlcategory/docker.html</p>-->
+            <li><a
+                    href="/category/docker">Docker</a></li>
             <!--                    <p>index.htmlcategory/linux.html</p>-->
-            <li ><a
+            <li><a
                     href="/category/linux">Linux</a></li>
             <!--                    <p>index.htmlcategory/pelican.html</p>-->
-            <li ><a
+            <li><a
                     href="/category/pelican">Pelican</a></li>
             <!--                    <p>index.htmlcategory/postgres.html</p>-->
-            <li ><a
+            <li><a
                     href="/category/postgres">Postgres</a></li>
         </ul>
         <h3 class="text-muted"><a href="/">Developer HandBook</a></h3>
         <h2 class="text-muted"></h2>
     </div>
-<section id="content" class="content">
+    <section id="content" class="content">
 
         <article class="hentry">
-                <header><h2 class="entry-title"><a href="/Synaptic.html" rel="bookmark"
-                                                   title="Permalink to Synaptic">Synaptic</a></h2></header>
-                <div class="entry-content"> <p>Install quick filter</p>
-<div class="highlight"><pre><span></span><code>sudo apt-get update
-sudo apt-get install apt-xapian-index
-</code></pre></div></div><!-- entry-content -->
+            <header><h2 class="entry-title"><a href="/docker-commands.html" rel="bookmark"
+                                               title="Permalink to Docker Commands">Docker Commands</a></h2></header>
+            <div class="entry-content"><p>Build image</p>
+                <div class="highlight"><pre><span></span><code>docker build . -t tagname
+</code></pre>
+                </div>
+
+                <p>Shell inside container, etc...</p>
+                <div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -it image sh
+</code></pre>
+                </div>
+
+                <p>Grep logs</p>
+                <div class="highlight"><pre><span></span><code>docker logs image <span class="m">2</span>&gt;<span
+                        class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> grep <span class="s2">&quot;string&quot;</span>
+</code></pre>
+                </div>
+
+                <p>Get dump.sql from container</p>
+                <div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -it image pg_dump -U username database &gt; dump.sql
+</code></pre>
+                </div>
+
+                <p>Restore from dump.sql to container</p>
+                <div class="highlight">
+                    <pre><span></span><code>cat dump.sql <span class="p">|</span> docker <span class="nb">exec …</span></code></pre>
+                </div>
+            </div><!-- entry-content -->
         </article>
         <article class="hentry">
-                <header><h2 class="entry-title"><a href="/install-pelican.html" rel="bookmark"
+            <header><h2 class="entry-title"><a href="/docker-compose-commands.html" rel="bookmark"
+                                               title="Permalink to Docker-compose Commands">Docker-compose Commands</a>
+            </h2></header>
+            <div class="entry-content"><p>Reload image and run demon</p>
+                <div class="highlight"><pre><span></span><code>docker-compose stop image
+docker-compose rm image
+docker-compose up -d image
+</code></pre>
+                </div>
+            </div><!-- entry-content -->
+        </article>
+        <article class="hentry">
+            <header><h2 class="entry-title"><a href="/postgres-commands.html" rel="bookmark"
+                                               title="Permalink to PostgresSQL Commands">PostgresSQL Commands</a></h2>
+            </header>
+            <div class="entry-content"><p>Save backup to dump.sql</p>
+                <div class="highlight"><pre><span></span><code>pg_dump --clean -U username database  &gt; dump.sql
+</code></pre>
+                </div>
+
+                <p>Restore from dump.sql</p>
+                <div class="highlight"><pre><span></span><code>sudo -i -u postgres psql -d database &lt; dump.sql
+</code></pre>
+                </div>
+
+                <div class="highlight"><pre><span></span><code>psql -U postgres -d database &lt; dump.sql
+</code></pre>
+                </div>
+
+                <div class="highlight"><pre><span></span><code>psql --username username --dbname database -f dump.sql
+</code></pre>
+                </div>
+            </div><!-- entry-content -->
+        </article>
+        <article class="hentry">
+            <header><h2 class="entry-title"><a href="/Synaptic.html" rel="bookmark"
+                                               title="Permalink to Synaptic">Synaptic</a></h2></header>
+            <div class="entry-content"><p>Install quick filter</p>
+                <div class="highlight"><pre><span></span><code>sudo apt-get update
+sudo apt-get install apt-xapian-index
+</code></pre>
+                </div>
+            </div><!-- entry-content -->
+        </article>
+        <article class="hentry">
+            <header><h2 class="entry-title"><a href="/install-pelican.html" rel="bookmark"
                                                    title="Permalink to Python Pelican Tutorial">Python Pelican Tutorial</a></h2></header>
                 <div class="entry-content"> <p>python3 install from pip3</p>
 <div class="highlight"><pre><span></span><code>pip3 install pelican markdown
 </code></pre></div>
 
-<p>Quick initial project</p>
-<div class="highlight"><pre><span></span><code>pelican-quickstart
-</code></pre></div>
+                    <p>Quick initial project</p>
+                    <div class="highlight"><pre><span></span><code>pelican-quickstart
+</code></pre>
+                    </div>
 
-<p>Set on pelicanconf.py for local developing</p>
-<div class="highlight"><pre><span></span><code><span class="n">RELATIVE_URLS</span> <span class="o">=</span> <span class="kc">True</span>
-</code></pre></div>
+                    <p>Set on pelicanconf.py for local developing</p>
+                    <div class="highlight"><pre><span></span><code><span class="n">RELATIVE_URLS</span> <span class="o">=</span> <span
+                            class="kc">True</span>
+</code></pre>
+                    </div>
 
-<p>Run develop server</p>
-<div class="highlight"><pre><span></span><code>pelican --list
-</code></pre></div>
+                    <p>Run develop server</p>
+                    <div class="highlight"><pre><span></span><code>make devserver
+</code></pre>
+                    </div>
 
-<p>Build with options</p>
-<div class="highlight"><pre><span></span><code>pelican -s pelicanconf.py -o output -D
-</code></pre></div>
+                    <div class="highlight"><pre><span></span><code>pelican --list
+</code></pre>
+                    </div>
 
-<p>Download templates</p>
-<div class="highlight"><pre><span></span><code>git clone --recursive https://github.com/getpelican/pelicanthemes.git
-</code></pre></div>
+                    <p>Build with options</p>
+                    <div class="highlight"><pre><span></span><code>pelican -s pelicanconf.py -o output -D
+</code></pre>
+                    </div>
 
-<p>Select theme, copy …</p></div><!-- entry-content -->
+                    <p>Download templates</p>
+                    <div class="highlight"><pre><span></span><code>git clone --recursive https://github.com/getpelican/pelicanthemes.git
+</code></pre>
+                    </div>
+
+                    <p>Select …</p></div><!-- entry-content -->
         </article>
         <article class="hentry">
                 <header><h2 class="entry-title"><a href="/install-postgres.html" rel="bookmark"
