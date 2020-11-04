@@ -13,12 +13,13 @@ body {
 }
 
 .nav-pills {
-    display: none;
+    /*display: none;*/
 }
 
 /* Custom page header */
 .header {
     border-bottom: 1px solid #e5e5e5;
+    min-width: 500px;
 }
 
 /* Make the masthead heading the same height as the navigation */
@@ -505,10 +506,25 @@ a:visited {
 
     /* Space out the masthead */
     .header {
+        min-width: 500px;
         margin-bottom: 30px;
     }
 
     .nav-pills, .bottom-nav {
-        display: block;
+        /*display: block;*/
     }
+}
+
+
+.menu {
+    display: none;
+    list-style-type: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#categories:hover .menu {
+    display: block;
+    color: #fff;
+    background-color: #eee;
 }

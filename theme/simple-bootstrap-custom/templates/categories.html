@@ -5,6 +5,8 @@
 <ul>
     {% for category, articles in categories %}
     <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
+    <!--        <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>  -->
+    <p>{{articles.title}}</p>
     {% endfor %}
 </ul>
 {% endblock %}

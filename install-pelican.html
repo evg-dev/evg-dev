@@ -13,20 +13,34 @@
     <div class="header">
         <ul class="nav nav-pills pull-right">
 
-            <li class=""><a href="/">Home</a></li>
+            <!--            <li class=""><a href="/">Home</a></li>-->
+            <!--            -->
             <!--                    <li><a href="/archives.html">Archives</a></li>-->
-            <!--                    <p>install-pelican.htmlcategory/docker.html</p>-->
-            <li><a
-                    href="/category/docker">Docker</a></li>
-            <!--                    <p>install-pelican.htmlcategory/linux.html</p>-->
-            <li><a
-                    href="/category/linux">Linux</a></li>
-            <!--                    <p>install-pelican.htmlcategory/pelican.html</p>-->
-            <li><a
-                    href="/category/pelican">Pelican</a></li>
-            <!--                    <p>install-pelican.htmlcategory/postgres.html</p>-->
-            <li><a
-                    href="/category/postgres">Postgres</a></li>
+
+            <li id="categories"><a href="/categories">Categories</a>
+                <ul class="menu">
+                    <li>
+                        <a href="/category/docker">Docker</a>
+                    </li>
+                </ul>
+                <ul class="menu">
+                    <li>
+                        <a href="/category/linux">Linux</a>
+                    </li>
+                </ul>
+                <ul class="menu">
+                    <li>
+                        <a href="/category/pelican">Pelican</a>
+                    </li>
+                </ul>
+                <ul class="menu">
+                    <li>
+                        <a href="/category/postgres">Postgres</a>
+                    </li>
+                </ul>
+            </li>
+
+
         </ul>
         <h3 class="text-muted"><a href="/">Developer HandBook</a></h3>
         <h2 class="text-muted"></h2>
@@ -42,8 +56,9 @@
 
     <div class="entry-content">
         <p>python3 install from pip3</p>
-<div class="highlight"><pre><span></span><code>pip3 install pelican markdown
-</code></pre></div>
+        <div class="highlight"><pre><span></span><code>pip3 install pelican markdown
+</code></pre>
+        </div>
 
         <p>Quick initial project</p>
         <div class="highlight"><pre><span></span><code>pelican-quickstart
@@ -72,11 +87,15 @@
 
         <p>Download templates</p>
         <div class="highlight"><pre><span></span><code>git clone --recursive https://github.com/getpelican/pelicanthemes.git
-</code></pre></div>
+</code></pre>
+        </div>
 
-<p>Select theme, copy to <code>/theme/</code> on root project and set you THEME on pelicanconf.py for customisation  </p>
-<div class="highlight"><pre><span></span><code><span class="n">THEME</span> <span class="o">=</span> <span class="s1">&#39;/theme/{{your_theme}}/&#39;</span>
-</code></pre></div>
+        <p>Select theme, copy to <code>/theme/</code> on root project and set you THEME on pelicanconf.py for
+            customisation </p>
+        <div class="highlight"><pre><span></span><code><span class="n">THEME</span> <span class="o">=</span> <span
+                class="s1">&#39;/theme/{{your_theme}}/&#39;</span>
+</code></pre>
+        </div>
     </div><!-- /.entry-content -->
     <footer class="post-info text-muted">
         Posted on <abbr class="published" title="2020-10-25T12:00:00+05:00">
