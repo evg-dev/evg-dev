@@ -48,21 +48,37 @@
 <section id="content" class="content">
     <!--<h2 class="category_list_title">Category : Linux</h2>-->
 
-        <article class="hentry">
-                <header><h2 class="entry-title"><a href="/Synaptic.html" rel="bookmark"
-                                                   title="Permalink to Synaptic">Synaptic</a></h2></header>
-                <div class="entry-content"> <p>Install quick filter</p>
-<div class="highlight"><pre><span></span><code>sudo apt-get update
+    <article class="hentry">
+        <header><h2 class="entry-title"><a href="/Synaptic.html" rel="bookmark"
+                                           title="Permalink to Synaptic">Synaptic</a></h2></header>
+        <div class="entry-content"><p>Install quick filter</p>
+            <div class="highlight"><pre><span></span><code>sudo apt-get update
 sudo apt-get install apt-xapian-index
-</code></pre></div></div><!-- entry-content -->
-        </article>
-<div class="pager">
+</code></pre>
+            </div>
+        </div><!-- entry-content -->
+    </article>
+    <article class="hentry">
+        <header><h2 class="entry-title"><a href="/add_ssh_key.html" rel="bookmark"
+                                           title="Permalink to SSH">SSH</a></h2></header>
+        <div class="entry-content"><p>Generate key for remote host</p>
+            <div class="highlight"><pre><span></span><code>ssh-keygen -t rsa -b <span class="m">2048</span>
+Generating public/private rsa key pair.
+Enter file in which to save the key <span class="o">(</span>/home/username/.ssh/id_rsa<span class="o">)</span>: 
+Enter passphrase <span class="o">(</span>empty <span class="k">for</span> no passphrase<span class="o">)</span>: 
+Enter same passphrase again: 
+Your identification has been saved in /home/username/.ssh/id_rsa.
+Your public …</code></pre>
+            </div>
+        </div><!-- entry-content -->
+    </article>
+    <div class="pager">
 
-    <ul>
-        <!--                        <li class="previous disabled"><a>← Previous</a></li>-->
-        <!--                        <li class="next disabled"><a>Next →</a></li>-->
-    </ul>
-</div>
+        <ul>
+            <!--                        <li class="previous disabled"><a>← Previous</a></li>-->
+            <!--                        <li class="next disabled"><a>Next →</a></li>-->
+        </ul>
+    </div>
 </section><!-- content -->
     <footer id="contentinfo" class="footer">
         <!--                    <nav class="pull-right bottom-nav">-->
