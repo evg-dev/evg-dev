@@ -1,4 +1,4 @@
-Title: SSH  
+Title: Automate SSH login without password  
 Date: 2020-10-25 12:00
 Category: Linux
 Slug: add_ssh_key
