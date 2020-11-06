@@ -11,37 +11,37 @@
 <body id="index" class="archive">
 <div class="container">
     <div class="header">
-        <ul class="nav nav-pills pull-right">
+        <div class="nav nav-pills pull-right">
 
             <!--            <li class=""><a href="/">Home</a></li>-->
             <!--            -->
             <!--                    <li class="active"><a href="/archives.html">Archives</a></li>-->
 
-            <li id="categories"><a href="/categories">Categories</a>
+            <label for="menu" class="menu_label">Menu</label>
+            <input type="checkbox" id="menu">
+            <!--            <a href="/categories">Menu</a>-->
+            <div class="show_menu">
                 <ul class="menu">
-                    <li>
+                    Categories
+                    <li class="category_list">
                         <a href="/category/docker">Docker</a>
                     </li>
-                </ul>
-                <ul class="menu">
-                    <li class="active">
+                    <li class="category_list" class="active">
                         <a href="/category/linux">Linux</a>
                     </li>
-                </ul>
-                <ul class="menu">
-                    <li>
+                    <li class="category_list">
                         <a href="/category/pelican">Pelican</a>
                     </li>
-                </ul>
-                <ul class="menu">
-                    <li>
+                    <li class="category_list">
                         <a href="/category/postgres">Postgres</a>
                     </li>
+                    <!--                    <li href="/about.html">About</li>-->
                 </ul>
-            </li>
+            </div>
+            <!--            </input>-->
 
 
-        </ul>
+        </div>
         <h3 class="text-muted"><a href="/">Developer HandBook</a></h3>
         <h2 class="text-muted"></h2>
     </div>

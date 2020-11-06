@@ -48,7 +48,7 @@
 <body id="index" class="archive">
 <div class="container">
     <div class="header">
-        <ul class="nav nav-pills pull-right">
+        <div class="nav nav-pills pull-right">
 
             <!--            <li class="{% block navclass %}{{ NAVCLASS }}{% endblock navclass %}"><a href="/{{ SITEURL }}">Home</a></li>-->
             <!--            {% for p in pages %}-->
@@ -57,18 +57,24 @@
             <!--            {% endfor %}-->
             <!--                    <li{% if author or tag %} class="active"{% endif %}{% block archclass %}{{ ARCHCLASS }}{% endblock archclass %}><a href="{{ SITEURL }}/archives.html">Archives</a></li>-->
 
-            <li id="categories"><a href="{{ SITEURL }}/categories">Categories</a>
-                {% for category, articles in categories %}
+            <label for="menu" class="menu_label">Menu</label>
+            <input type="checkbox" id="menu">
+            <!--            <a href="{{ SITEURL }}/categories">Menu</a>-->
+            <div class="show_menu">
                 <ul class="menu">
-                    <li {% if output_file== category.save_as %} class="active" {% endif %}>
+                    Categories
+                    {% for category, articles in categories %}
+                    <li class="category_list" {% if output_file== category.save_as %} class="active" {% endif %}>
                         <a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a>
                     </li>
+                    {% endfor %}
+                    <!--                    <li href="{{ SITEURL }}/about.html">About</li>-->
                 </ul>
-                {% endfor %}
-            </li>
+            </div>
+            <!--            </input>-->
 
 
-        </ul>
+        </div>
         <h3 class="text-muted"><a href="/{{ SITEURL }}">{{ SITENAME }}</a></h3>
         <h2 class="text-muted">{{ SITESUBTITLE }}</h2>
     </div>
