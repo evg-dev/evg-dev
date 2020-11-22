@@ -525,6 +525,7 @@ a:visited {
 
 label.menu_label {
     float: right;
+    margin-top: 7px;
 }
 
 .menu {
@@ -561,6 +562,7 @@ input#menu[type="checkbox"]:checked + .show_menu {
     display: block;
     position: absolute;
     right: 0;
+    top: 50px;
 }
 
 #categories:hover .menu {
@@ -575,4 +577,8 @@ input#menu[type="checkbox"]:checked + .show_menu {
     padding: 5px 5px 5px 5px;
     border-radius: 5px;
     margin-left: 20px;
+}
+
+.category_top {
+    padding-bottom: 5px;
 }

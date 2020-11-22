@@ -62,7 +62,7 @@
             <!--            <a href="{{ SITEURL }}/categories">Menu</a>-->
             <div class="show_menu">
                 <ul class="menu">
-                    Categories
+                    <li class="category_top">Categories:</li>
                     {% for category, articles in categories %}
                     <li class="category_list" {% if output_file== category.save_as %} class="active" {% endif %}>
                         <a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a>
