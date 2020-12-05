@@ -9,10 +9,19 @@ PATH = 'content'
 THEME = 'theme/simple-bootstrap-custom'
 TIMEZONE = 'Asia/Yekaterinburg'
 
-CATEGORY_URL = 'category/{slug}'
-CATEGORY_SAVE_AS = 'category/{slug}.html'
 
-DEFAULT_LANG = 'ru'
+RELATIVE_URLS = False
+
+CATEGORY_URL = '{slug}'
+CATEGORY_SAVE_AS = '{slug}.html'
+
+ARTICLE_URL = '{category}/{slug}'
+ARTICLE_SAVE_AS = '{category}/{slug}.html'
+
+# PAGE_URL = CATEGORY_URL + '/{slug}/'
+# PAGE_SAVE_AS = CATEGORY_URL + '/{slug}/index.html'
+
+DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
