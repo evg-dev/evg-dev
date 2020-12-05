@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Docker-compose Commands - Developer HandBook</title>
+    <title> Articles in Linux category - Developer HandBook</title>
     <meta charset="utf-8"/>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="/theme/static/css/style.css" rel="stylesheet"/>
@@ -15,7 +15,7 @@
 
             <!--            <li class=""><a href="/">Home</a></li>-->
             <!--            -->
-            <!--                    <li><a href="/archives.html">Archives</a></li>-->
+            <!--                    <li class="active"><a href="/archives.html">Archives</a></li>-->
 
             <label for="menu" class="menu_label">Menu</label>
             <input type="checkbox" id="menu">
@@ -26,7 +26,7 @@
                     <li class="category_list">
                         <a href="/docker">Docker</a>
                     </li>
-                    <li class="category_list">
+                    <li class="category_list" class="active">
                         <a href="/linux">Linux</a>
                     </li>
                     <li class="category_list">
@@ -47,33 +47,42 @@
         </div>
         <h3 class="text-muted"><a href="/">Developer HandBook</a></h3>
     </div>
-    <section id="content" class="article content">
-        <header>
-            <h2 class="entry-title">
-                <a href="/docker-compose-commands" rel="bookmark"
-                   title="Permalink to Docker-compose Commands">Docker-compose Commands</a></h2>
+    <section id="content" class="content">
+        <!--<h2 class="category_list_title">Category : Linux</h2>-->
 
-        </header>
-
-
-        <div class="entry-content">
-            <p>Reload image and run demon</p>
-            <div class="highlight"><pre><span></span><code>docker-compose stop image
-docker-compose rm image
-docker-compose up -d image
+        <article class="hentry">
+            <header><h2 class="entry-title"><a href="/Synaptic" rel="bookmark"
+                                               title="Permalink to Synaptic">Synaptic</a></h2></header>
+            <div class="entry-content"><p>Install quick filter</p>
+                <div class="highlight"><pre><span></span><code>sudo apt-get update
+sudo apt-get install apt-xapian-index
 </code></pre>
-            </div>
-        </div><!-- /.entry-content -->
-        <footer class="post-info text-muted">
-            Posted on <abbr class="published" title="2020-10-27T12:00:00+05:00">
-            Вт 27 октября 2020
-        </abbr>
-            <address class="vcard author">
-                by <a class="url fn" href="/about">evg-dev</a>
-            </address>
-            in <a href="/docker">Docker</a> Tagged
-        </footer><!-- /.post-info -->
-    </section>
+                </div>
+            </div><!-- entry-content -->
+        </article>
+        <article class="hentry">
+            <header><h2 class="entry-title"><a href="/add_ssh_key" rel="bookmark"
+                                               title="Permalink to Automate SSH login without password">Automate SSH
+                login without password</a></h2></header>
+            <div class="entry-content"><p>Generate key for remote host</p>
+                <div class="highlight"><pre><span></span><code>ssh-keygen -t rsa -b <span class="m">2048</span>
+Generating public/private rsa key pair.
+Enter file in which to save the key <span class="o">(</span>/home/username/.ssh/id_rsa<span class="o">)</span>: 
+Enter passphrase <span class="o">(</span>empty <span class="k">for</span> no passphrase<span class="o">)</span>: 
+Enter same passphrase again: 
+Your identification has been saved in /home/username/.ssh/id_rsa.
+Your public …</code></pre>
+                </div>
+            </div><!-- entry-content -->
+        </article>
+        <div class="pager">
+
+            <ul>
+                <!--                        <li class="previous disabled"><a>← Previous</a></li>-->
+                <!--                        <li class="next disabled"><a>Next →</a></li>-->
+            </ul>
+        </div>
+    </section><!-- content -->
     <footer id="contentinfo" class="footer">
         <!--                    <nav class="pull-right bottom-nav">-->
         <!--                        <a href="/None">RSS</a>-->

@@ -9,20 +9,24 @@ PATH = 'content'
 THEME = 'theme/simple-bootstrap-custom'
 TIMEZONE = 'Asia/Yekaterinburg'
 
-
-RELATIVE_URLS = False
+# YEAR_ARCHIVES_URL = '2020'
+# ARCHIVES_URL = '2020'
 
 CATEGORY_URL = '{slug}'
 CATEGORY_SAVE_AS = '{slug}.html'
 
-ARTICLE_URL = '{category}/{slug}'
-ARTICLE_SAVE_AS = '{category}/{slug}.html'
+ARTICLE_URL = '{slug}'
+ARTICLE_SAVE_AS = '{slug}.html'
 
+AUTHOR_URL = 'about'
+AUTHOR_SAVE_AS = 'about.html'
 # PAGE_URL = CATEGORY_URL + '/{slug}/'
 # PAGE_SAVE_AS = CATEGORY_URL + '/{slug}/index.html'
 
 DEFAULT_LANG = 'en'
+import site;
 
+site.getsitepackages()
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Articles in Postgres category - Developer HandBook</title>
+    <meta charset="utf-8"/>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/theme/static/css/style.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+
+<body id="index" class="archive">
+<div class="container">
+    <div class="header">
+        <div class="nav nav-pills pull-right">
+
+            <!--            <li class=""><a href="/">Home</a></li>-->
+            <!--            -->
+            <!--                    <li class="active"><a href="/archives.html">Archives</a></li>-->
+
+            <label for="menu" class="menu_label">Menu</label>
+            <input type="checkbox" id="menu">
+            <!--            <a href="/categories">Menu</a>-->
+            <div class="show_menu">
+                <ul class="menu">
+                    <li class="category_top">Categories:</li>
+                    <li class="category_list">
+                        <a href="/docker">Docker</a>
+                    </li>
+                    <li class="category_list">
+                        <a href="/linux">Linux</a>
+                    </li>
+                    <li class="category_list">
+                        <a href="/pelican">Pelican</a>
+                    </li>
+                    <li class="category_list" class="active">
+                        <a href="/postgres">Postgres</a>
+                    </li>
+                    <li class="category_list">
+                        <a href="/soft">Soft</a>
+                    </li>
+                    <!--                    <li href="/about.html">About</li>-->
+                </ul>
+            </div>
+            <!--            </input>-->
+
+
+        </div>
+        <h3 class="text-muted"><a href="/">Developer HandBook</a></h3>
+    </div>
+    <section id="content" class="content">
+        <!--<h2 class="category_list_title">Category : Postgres</h2>-->
+
+        <article class="hentry">
+            <header><h2 class="entry-title"><a href="/postgres-commands" rel="bookmark"
+                                               title="Permalink to PostgresSQL Commands">PostgresSQL Commands</a></h2>
+            </header>
+            <div class="entry-content"><p>Save backup to dump.sql</p>
+                <div class="highlight"><pre><span></span><code>pg_dump --clean -U username database  &gt; dump.sql
+</code></pre>
+                </div>
+
+                <p>Restore from dump.sql</p>
+                <div class="highlight"><pre><span></span><code>sudo -i -u postgres psql -d database &lt; dump.sql
+</code></pre>
+                </div>
+
+                <div class="highlight"><pre><span></span><code>psql -U postgres -d database &lt; dump.sql
+</code></pre>
+                </div>
+
+                <div class="highlight"><pre><span></span><code>psql --username username --dbname database -f dump.sql
+</code></pre>
+                </div>
+            </div><!-- entry-content -->
+        </article>
+        <article class="hentry">
+            <header><h2 class="entry-title"><a href="/install-postgres" rel="bookmark"
+                                               title="Permalink to Ubuntu/Debian install PostgresSQL">Ubuntu/Debian
+                install PostgresSQL</a></h2></header>
+            <div class="entry-content">
+                <div class="highlight"><pre><span></span><code>sudo apt-get update
+sudo apt-get install postgresql postgresql-contrib
+</code></pre>
+                </div>
+
+                <p>Check install</p>
+                <div class="highlight"><pre><span></span><code>sudo -i -u postgres psql
+</code></pre>
+                </div>
+
+                <p>Create user in linux</p>
+                <div class="highlight"><pre><span></span><code>sudo adduser username
+</code></pre>
+                </div>
+
+                <p>Add user in postgres </p>
+                <div class="highlight"><pre><span></span><code>sudo -u postgres createuser --interactive
+</code></pre>
+                </div>
+
+                <p>And see</p>
+                <div class="highlight"><pre><span></span><code>Enter name of role to add: username
+Shall the new role be a superuser? <span class="o">(</span>y/n<span class="o">)</span> y …</code></pre>
+                </div>
+            </div><!-- entry-content -->
+        </article>
+        <div class="pager">
+
+            <ul>
+                <!--                        <li class="previous disabled"><a>← Previous</a></li>-->
+                <!--                        <li class="next disabled"><a>Next →</a></li>-->
+            </ul>
+        </div>
+    </section><!-- content -->
+    <footer id="contentinfo" class="footer">
+        <!--                    <nav class="pull-right bottom-nav">-->
+        <!--                        <a href="/None">RSS</a>-->
+        <!--                    </nav>-->
+        <address id="about" class="vcard body">
+            <a href="/">evg-dev.github.io</a>
+        </address><!-- /#about -->
+    </footer><!-- /#contentinfo -->
+</div><!-- container -->
+</body>
+</html>
